@@ -13,5 +13,8 @@ UCLASS()
 class MGD_TEMPLATE_API AMGGameMode_Lobby : public AMGGameMode
 {
 	GENERATED_BODY()
+
+protected:
+	virtual void OnPostLogin(AController* NewPlayer) override;
 	
 };
