@@ -30,15 +30,15 @@ void AMGGameMode_Lobby::OnPostLogin(AController* NewPlayer)
 			int playerStartIndex = 1;
 
 			// assigning the index if it equals any of the following
-			if (psRef->PlayerStartTag == FName('Player2'))
+			if (psRef->PlayerStartTag == FName("Player2"))
 				playerStartIndex = 2;
-			else if (psRef->PlayerStartTag == FName('Player3'))
+			else if (psRef->PlayerStartTag == FName("Player3"))
 				playerStartIndex = 3;
-			else if (psRef->PlayerStartTag == FName('Player4'))
+			else if (psRef->PlayerStartTag == FName("Player4"))
 				playerStartIndex = 4;
-			else if (psRef->PlayerStartTag == FName('Player5'))
+			else if (psRef->PlayerStartTag == FName("Player5"))
 				playerStartIndex = 5;
-			else if (psRef->PlayerStartTag == FName('Player6'))
+			else if (psRef->PlayerStartTag == FName("Player6"))
 				playerStartIndex = 6;
 
 			// getting the number of players in the game
