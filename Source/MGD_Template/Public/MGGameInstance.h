@@ -44,6 +44,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Session")
 	void FindAndJoinSession();
 
+	// start a game if one exists
+	UFUNCTION(BlueprintCallable, Category="Session")
+	void StartLobbyGame();
+
 	// keyword that only allows this class and derived/child classes to run this function
 protected:
 	UFUNCTION(BlueprintImplementableEvent, Category="Login")

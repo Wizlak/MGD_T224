@@ -4,6 +4,7 @@
 #include "MGGameInstance.h"
 #include "OnlineSubsystem.h"
 #include "OnlineSubsystemUtils.h"
+#include "GameFramework/GameModeBase.h"
 #include "Online/OnlineSessionNames.h"
 
 UMGGameInstance::UMGGameInstance()
@@ -185,6 +186,12 @@ void UMGGameInstance::FindAndJoinSession()
 
 	// finding a session based on found session query settings
 	sessionRef->FindSessions(0, FoundSessions.ToSharedRef());
+}
+
+void UMGGameInstance::StartLobbyGame()
+{
+	GetWorld()->GetAuthGameMode()->bUseSeamlessTravel = true;
+	GetWorld()->ServerTravel("/Game/MyContent/Maps/Lvl_Test", false);
 }
 
 void UMGGameInstance::EOSLoginComplete(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId,
