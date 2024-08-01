@@ -6,6 +6,8 @@
 #include "Engine/GameInstance.h"
 #include "MGGameInstance.generated.h"
 
+#define MGSESSION_NAME FName(TEXT("MGSESSION"))
+
 /**
  * 
  */
@@ -26,6 +28,9 @@ public:
 
 	UFUNCTION(BlueprintPure, Category="User")
 	FString GetDisplayName() const;
+
+	UFUNCTION(BlueprintPure, Category="Session")
+	bool IsInSession() const;
 
 	// keyword that only allows this class and derived/child classes to run this function
 protected:
