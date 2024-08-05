@@ -194,6 +194,12 @@ void UMGGameInstance::StartLobbyGame()
 	GetWorld()->ServerTravel("/Game/MyContent/Maps/Lvl_Robo_Stadium", false);
 }
 
+void UMGGameInstance::EndGame()
+{
+	GetWorld()->GetAuthGameMode()->bUseSeamlessTravel = true;
+	GetWorld()->ServerTravel("/Game/MyContent/Maps/Lvl_Lobby", false);
+}
+
 void UMGGameInstance::EOSLoginComplete(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId,
                                        const FString& Error)
 {

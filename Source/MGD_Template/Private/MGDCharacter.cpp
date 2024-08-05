@@ -59,3 +59,4 @@ void AMGDCharacter::Multi_RepPitch_Implementation(const float& Pitch)
 	// Update the pitch to match the value
 	pRepPitch=Pitch;
 }
+
